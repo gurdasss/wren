@@ -17,7 +17,7 @@ static WrenVM* initVM(bool isAPITest)
   wrenInitConfiguration(&config);
 
   config.resolveModuleFn = resolveModule;
-  config.loadModuleFn = readModule;
+  // config.loadModuleFn = readModule;  // EXPERIMENT 03: remove the host's module loader
   config.writeFn = vm_write;
   config.errorFn = reportError;
 
