@@ -26,6 +26,7 @@ A log of hypothesis-driven experiments on the Wren VM. Each experiment makes one
 | 01 | [Remove the host's `writeFn`](01-no-writefn.md) | 1 | `experiment/01-no-writefn` | Yes (2/2), plus one unpredicted finding |
 | 02 | [Remove the host's `errorFn`](02-no-errorfn.md) | 1 | `experiment/02-no-errorfn` | Partly: 1 held, 1 right direction but the swap wasn't exact |
 | 03 | [Remove the host's `loadModuleFn`](03-no-loadmodulefn.md) | 1 | `experiment/03-no-loadmodulefn` | Yes, plus 4 surviving tests explained |
+| 04 | [Dump the compiled bytecode](04-dump-bytecode.md) | 2 | `experiment/04-dump-bytecode` | No: per function, not per call; all tests failed; found a test-runner bug |
 
 ## Template
 
