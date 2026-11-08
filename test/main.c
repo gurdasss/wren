@@ -19,7 +19,7 @@ static WrenVM* initVM(bool isAPITest)
   config.resolveModuleFn = resolveModule;
   config.loadModuleFn = readModule;
   config.writeFn = vm_write;
-  config.errorFn = reportError;
+  // config.errorFn = reportError;  // EXPERIMENT 02: remove the host's error callback
 
   if(isAPITest) {
     config.bindForeignClassFn = APITest_bindForeignClass;
