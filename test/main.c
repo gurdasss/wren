@@ -18,7 +18,7 @@ static WrenVM* initVM(bool isAPITest)
 
   config.resolveModuleFn = resolveModule;
   config.loadModuleFn = readModule;
-  config.writeFn = vm_write;
+  // config.writeFn = vm_write;  // EXPERIMENT 01: remove the host's print callback
   config.errorFn = reportError;
 
   if(isAPITest) {
