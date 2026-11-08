@@ -6,7 +6,7 @@
 | **Branch** | `fix/test-runner-decode-return` (commit `5ef03b75`, branched from `upstream/main`) |
 | **Subsystem** | Test runner (`util/test.py`) |
 | **Consequence level** | 1: tooling only, no VM code touched |
-| **Status** | done. The fix is on the fork; no upstream PR opened yet. |
+| **Status** | done. Upstream PR [wren-lang/wren#1253](https://github.com/wren-lang/wren/pull/1253) opened 2026-11-08 |
 
 ## Question
 Does adding `return` after `self.fail('Error decoding output.')` stop one bad test from crashing the whole run?
@@ -87,6 +87,6 @@ The 11 decode failures, all deliberately invalid UTF-8 string tests:
 - **A test runner has its own policies:** example scripts are exempt from output checks, and some scripts are skipped entirely. A "pass" means "passed this runner's checks," which can be less than you'd assume.
 
 ## Follow-ups
-- **Upstream PR:** open a PR from `gurdasss:fix/test-runner-decode-return` to `wren-lang/wren:main`. This is public and posted under the user's name, so the user decides.
+- **Upstream PR:** opened as [#1253](https://github.com/wren-lang/wren/pull/1253). It also adds the user to `AUTHORS` with a GitHub noreply address, per Wren's contributing guide.
 - The fork's `main` doesn't contain the fix (it's only on the fix branch). Merge or cherry-pick it into the fork's `main` if wanted.
 - **Level 2:** `WREN_DEBUG_TRACE_INSTRUCTIONS`, to watch bytecode *execute* and compare with the compile-time dump from 04.
